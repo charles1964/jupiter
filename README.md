@@ -8,7 +8,7 @@ into the directory, and run:
  'ansible-playbook -i hosts site.yml`
  
  ## to connect to netdata
- http://loclhost:19999
+ http://localhost:19999
  
  ## to connect to kibana
  http://localhost:5601
