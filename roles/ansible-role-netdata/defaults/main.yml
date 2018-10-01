@@ -1,0 +1,34 @@
+---
+# version can be either 'latest' or a specific version, e.g. v1.7.0-171-ga5a21f25-x86_64-20170824-062903
+netdata_version: "latest"
+netdata_base_url: "https://raw.githubusercontent.com/firehol/binary-packages/master"
+netdata_installer_tmp_dir: "/tmp"
+netdata_installation_dir: "/opt/netdata"
+netdata_provisioned_flag: "/opt/netdata.provisioned"
+netdata_force_install: true
+
+netdata_kickstart_download_url: "https://my-netdata.io/kickstart-static64.sh"
+netdata_kickstart_script_filename: "kickstart-static64.sh"
+netdata_kickstart_script_path: "{{ netdata_installer_tmp_dir }}/{{ netdata_kickstart_script_filename }}"
+
+netdata_download_filename: "netdata-{{ netdata_version }}.gz.run"
+netdata_download_url: "{{ netdata_base_url }}/{{ netdata_download_filename }}"
+netdata_download_script_path: "{{ netdata_installer_tmp_dir }}/{{ netdata_download_filename }}"
+
+
+netdata_conf_dir: "/etc/netdata"
+netdata_conf: "{{ netdata_conf_dir }}/netdata.conf"
+
+netdata_logs: "/var/log/netdata"
+netdata_logrotate_conf: "/etc/logrotate.d/netdata"
+
+netdata_service_name: "netdata"
+netdata_systemd_unit: "/etc/systemd/system/{{ netdata_service_name }}.service"
+netdata_initd_unit: "/etc/init.d/{{ netdata_service_name }}"
+
+
+netdata_user: "netdata"
+netdata_group: "netdata"
+netdata_binary: "/usr/sbin/netdata"
+netdata_oom_score: 0
+netdata_systemd_timeout_stop_sec: 60

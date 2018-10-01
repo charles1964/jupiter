@@ -1,0 +1,47 @@
+---
+- name: Check if netdata is already installed
+  stat:
+    path: "{{ netdata_installation_dir }}"
+  register: netdata_dir
+
+- name: Determine if to download and install
+  set_fact:
+    download_and_install: "{{ (netdata_force_install == true) | ternary(True, not (netdata_dir.stat.isdir is defined and netdata_dir.stat.isdir)) }}"
+
+- debug:
+    msg: "Downloading and installing: {{ download_and_install }}"
+
+
+- name: Download latest netdata
+  include: netdata_latest.yml
+  when: (netdata_version == 'latest' and download_and_install)
+
+- name: Install netdata version {{ netdata_version }}
+  include: netdata_version.yml
+  when: (netdata_version != 'latest' and download_and_install)
+
+
+- name: Ensure configuration directory exists
+  file:
+    name: "{{ netdata_conf_dir }}"
+    state: directory
+
+- name: Copy netdata configuration
+  template:
+    src: netdata.conf.j2
+    dest: "{{ netdata_conf }}"
+
+- name: Copy logrotate
+  template:
+    src: netdata.logrotate.j2
+    dest: "{{ netdata_logrotate_conf }}"
+
+- name: Configure netdata
+  include: "configure-{{ ansible_os_family }}.yml"
+  static: no
+
+- name: Restart netdata
+  service:
+    name: "{{ netdata_service_name }}"
+    state: restarted
+    enabled: yes

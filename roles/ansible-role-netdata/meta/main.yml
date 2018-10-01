@@ -1,0 +1,32 @@
+galaxy_info:
+  author: Avi Shefi
+  description: An Ansible role to install netdata without compilation
+  company:
+
+  license: MIT
+
+  min_ansible_version: 2.1
+
+  platforms:
+    - name: EL
+      versions:
+        - 6
+        - 7
+    - name: Ubuntu
+      versions:
+        - precise
+        - trusty
+        - xenial
+    - name: Debian
+      versions:
+        - jessie
+        - wheezy
+
+  galaxy_tags:
+    - netdata
+    - realtime
+    - monitoring
+    - performance
+    - dashboard
+
+dependencies: []
