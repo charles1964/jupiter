@@ -1,6 +1,6 @@
 ---
 #
-# Playbook to install the ELK stack + Beats + netdata
+# Playbook to install the ELK + netdata
 - hosts: localhost
   remote_user: ubuntu 
   become: yes
@@ -10,4 +10,5 @@
   - { role: elasticsearch }
   - { role: kibana }
   - { role: metricbeat }
+  - { role: filebeat }  
   - { role: netdata }
