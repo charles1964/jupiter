@@ -15,4 +15,4 @@ into the directory, and run:
  
  ## address git clone
  
-[site.yml]: https://github.com/charles1964/jupiter.git
+ git clone https://github.com/charles1964/jupiter.git
