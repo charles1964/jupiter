@@ -4,10 +4,10 @@
 - hosts: localhost
   remote_user: ubuntu 
   become: yes
-  become_user: root 
+  become_user: root
   roles:
   - { role: java }
   - { role: elasticsearch }
   - { role: kibana }
   - { role: metricbeat }
-  - { role: ansible-role-netdata }
+  - { role: netdata }
