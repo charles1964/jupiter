@@ -8,4 +8,4 @@ into the directory, and run:
  ## to connect to kibana
  http://localhost:5601
 
-[site.yml]: https://github.com/charles1964/jupiter.git
+ https://github.com/charles1964/jupiter.git
