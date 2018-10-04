@@ -7,5 +7,5 @@ into the directory, and run:
  http://localhost:19999
  ## to connect to kibana
  http://localhost:5601
- ## address git clone
+
 [site.yml]: https://github.com/charles1964/jupiter.git
