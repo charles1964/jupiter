@@ -10,5 +10,4 @@
   - { role: kibana }
   - { role: metricbeat }
   - { role: filebeat }
-  - { role: netdata }
 

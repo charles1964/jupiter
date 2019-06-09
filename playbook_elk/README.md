@@ -1,4 +1,4 @@
-# Ansible ELK and netdata Playbook for Ubuntu 18.04.2 LTS (Bionic Beaver)
+# Ansible ELK Playbook for Ubuntu 18.04.2 LTS (Bionic Beaver)
 #This playbook is for setting up version 5.x of the ELK Stack on a remote server 
 # Instructions
 
@@ -20,9 +20,6 @@ java -version
 
 ansible-playbook -i hosts site.yml
 
-# to connect to netdata
-
- http://localhost:19999
 
 # to connect to kibana
 
