@@ -1,13 +1,13 @@
 ---
 #
-# Installing Java 8
+# Installing Java 11
 #
 
 # Add the Java repo
 
 - name: Add the Java PPA repo
-  apt_repository: 
-   repo: ppa:webupd8team/java
+  apt_repository:  
+   repo: ppa:linuxuprising/java 
 
 # Accept Oracle license
 
@@ -16,8 +16,8 @@
   
 # Install Java 
 
-- name: Install Java 8
-  apt:
-   name: oracle-java8-installer
+- name: Install Java 11
+  apt: update
+   name: oracle-java11-installer
    state: present
    update_cache: yes
