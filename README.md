@@ -6,19 +6,19 @@ install java 11 before for Ubuntu 18.04.2 LTS (Bionic Beaver)
 
 sudo add-apt-repository ppa:linuxuprising/java
 
-'sudo apt update'
+sudo apt update
 
-'sudo apt install oracle-java11-installer'
+sudo apt install oracle-java11-installer
 
-'sudo apt install oracle-java11-set-default'
+sudo apt install oracle-java11-set-default
 
-'java -version'
+java -version
 
 ----------------------------------------
 
 # into the directory, and run:
 
-'ansible-playbook -i hosts site.yml'
+ansible-playbook -i hosts site.yml
 
 # to connect to netdata
 
