@@ -1,7 +1,9 @@
 # Ansible ELK and netdata Playbook for Ubuntu 18.04.2 LTS (Bionic Beaver)
 #This playbook is for setting up version 5.x of the ELK Stack on a remote server 
 # Instructions
-#install java 11 before for Ubuntu 18.04.2 LTS (Bionic Beaver)
+
+install java 11 before for Ubuntu 18.04.2 LTS (Bionic Beaver)
+
 sudo add-apt-repository ppa:linuxuprising/java
 
 'sudo apt update'
