@@ -18,7 +18,7 @@ java -version
 
 # into the directory, and run:
 
-ansible-playbook -i hosts site.yml
+sudo ansible-playbook -i hosts site.yml
 
 
 # to connect to kibana
