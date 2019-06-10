@@ -10,19 +10,16 @@ sudo apt update
 
 sudo apt install oracle-java11-installer
 
-sudo apt install oracle-java11-set-default
-
 java -version
 
 ----------------------------------------
-
 # into the directory, and run:
 
 sudo ansible-playbook -i hosts site.yml
-
-
+----------------------------------------
 # to connect to kibana
 
  http://localhost:5601
 
 https://github.com/charles1964/jupiter.git
+
