@@ -1,0 +1,3 @@
+[submodule "playbook_LAMP"]
+	path = playbook_LAMP
+	url = https://github.com/charles1964/jupiter
