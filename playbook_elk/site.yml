@@ -1,6 +1,6 @@
 ---
 #
-# Playbook to install the ELK + netdata
+# Playbook to install ELK 
 - hosts: localhost
   remote_user: ubuntu 
   become: yes

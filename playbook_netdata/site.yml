@@ -1,6 +1,6 @@
 ---
 #
-# Playbook to instal lnetdata
+# Playbook to install netdata
 - hosts: localhost
   remote_user: ubuntu 
   become: yes
