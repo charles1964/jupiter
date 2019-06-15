@@ -1,5 +1,5 @@
 ---
-#
+
 # Playbook to install ELK 
 - hosts: localhost
   remote_user: ubuntu 
