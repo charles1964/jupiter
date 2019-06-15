@@ -6,7 +6,7 @@
   become: yes
   become_user: root
   roles:
-  - { role: ansible-deploy-kibana }
-  - { role: ansible-deploy-elasticsearch }
-  - { role: ansible-deploy-logstash }
+  - { role: kibana }
+  - { role: elasticsearch }
+  - { role: logstash }
   
