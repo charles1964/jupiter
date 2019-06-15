@@ -1,0 +1,12 @@
+---
+#
+# Playbook to install ELK 
+- hosts: localhost
+  remote_user: ubuntu 
+  become: yes
+  become_user: root
+  roles:
+  - { role: ansible-deploy-kibana }
+  - { role: ansible-deploy-elasticsearch }
+  - { role: ansible-deploy-logstash }
+  

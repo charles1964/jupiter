@@ -1,0 +1,2 @@
+[elkservers]
+localhost ansible_connection=local
