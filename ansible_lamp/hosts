@@ -1,2 +1,0 @@
-[lamp]
-localhost ansible_connection=local
